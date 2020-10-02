@@ -1,2 +1,3 @@
 # blogora
-It's a platform built by me to share thoughts &amp; ideas.
+Link : http://blogora.herokuapp.com
+It's a social media platform built by me where everywhere can share their thoughts.
