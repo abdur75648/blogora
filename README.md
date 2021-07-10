@@ -2,9 +2,9 @@
   <a href="http://blogora.herokuapp.com">
     <img src="icon.png" alt="Logo" width="100" height="100">
   </a>
-  <h1 align="center">Blogora</h1>
+  <b><h1 align="center">Blogora</h1></b>
 
-*Blogora* is a social media platform built by me: A place where everyone can share their thoughts.
+***Blogora*** is a social media platform built by me: A place where everyone can share their thoughts.
 It's been deployed on Heroku & is being used.
 Link : http://blogora.herokuapp.com
 
