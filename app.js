@@ -18,6 +18,27 @@ const postSchema = {
 const Post = mongoose.model("Post", postSchema);
 const app = express();
 
+
+
+// Auth0 User Authentication
+const { auth } = require('express-openid-connect');
+const { requiresAuth } = require('express-openid-connect');
+const config = {
+  authRequired: false,
+  auth0Logout: true,
+  secret: 'Use-your-own-code-here',
+  baseURL: 'http://blogora.herokuapp.com',
+  clientID: 'Use-your-own-ID-here',
+  issuerBaseURL: 'Use-your-URL-code-here'
+};
+
+
+// auth router attaches /login, /logout, and /callback routes to the baseURL
+app.use(auth(config));
+// req.isAuthenticated is provided from the auth router
+
+
+
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -32,13 +53,13 @@ app.get("/",function(req,res){
 app.get("/about",function(req,res){
   res.render("about.ejs")
 })
-app.get("/compose",function(req,res){
+app.get("/compose",requiresAuth(),function(req,res){
   res.render("compose.ejs")
 })
 app.get("/subscribe",function(req,res){
   res.render("subscribe.ejs")
 })
-app.get("/post/:postId",function(req,res){
+app.get("/post/:postId",requiresAuth(),function(req,res){
   const requestedPostId = req.params.postId;
   Post.findOne({_id: requestedPostId}, function(err, post){
     if (err){
@@ -70,18 +91,17 @@ app.post("/compose",function(req,res){
 app.post("/subscribe",function(req,res){
   const name = req.body.name;
   const email = req.body.email;
-  const password = req.body.password;
 
   const data = { members : [ { email_address : email, status : "subscribed",
               merge_fields : {
                   NAME : name,
-                  PASSWORD : password
+                  PASSWORD : name
               }}]
   }
   const jsonData = JSON.stringify(data);
 
-  const url = 'https://us17.api.mailchimp.com/Use-your-own-API-here'
-  const options = { method : "POST", auth : "Use-your-own-Auth-Token-here" }
+  const url = 'Use-your-own-URL-here'
+  const options = { method : "POST", auth : "Use-your-own-token-here" }
   const request = https.request(url,options,function(response){
       response.on("data",function(data){
           const newData = JSON.parse(data)
