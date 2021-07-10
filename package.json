@@ -1,0 +1,28 @@
+{
+  "name": "ejs-challenge",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "12.18.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
+    "express-openid-connect": "^2.4.0",
+    "https": "^1.0.0",
+    "loadash": "^1.0.0",
+    "lodash": "^4.17.21",
+    "mongoose": "^5.12.3",
+    "nodemon": "^2.0.4",
+    "request": "^2.88.2",
+    "response": "^0.18.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}

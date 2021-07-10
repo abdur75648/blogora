@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs") %>
+<div class="mainPost">
+<form class="form-signin" action="/subscribe" method="POST">
+    <img style="width: 30%;" class="mb-4" src="download.jpg" alt="">
+    <h1 class="h3 mb-3 font-weight-normal">Sign In/Up</h1>
+    <h6>To Post Something & Receive Our Newsletter</h6>
+    <h1 class="h3 mb-3 font-weight-normal">Old User? <a href="/login">Log In Here</a></h1>
+    <h6> ALready Logged In? <a href="/logout">Log Out</a></h6>
+    <h6>If you're a new user, please sign up</h6>
+    <input class="top form-control" type="text" name="name" placeholder="Your Name" required autofocus>
+    <input class="middle form-control" type="email" name="email" placeholder="Email address" required autofocus>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up!</button>
+</form>
+</div>
+
+<%- include("partials/footer.ejs") %>
