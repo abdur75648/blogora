@@ -16,7 +16,8 @@ Link : http://blogora.herokuapp.com
 
 ## Features
 * One can write post & read other's posts
-* Posts appear with the name of author & time
-* Once can also sign-up to my newsletter regularly
+* It uses MongoDB as a cloud database to store all the data as documents.
+* User authentication & authorization has been implemented using Auth0 Authentication API
+* Once can also sign-up to my newsletter regularly (mailchimp API used)
 
 **Note:** There is a lot of scope of improvement in this yet. If you have any suggestions for improvement, please create an issue or make a pull request.
