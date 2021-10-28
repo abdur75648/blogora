@@ -21,3 +21,6 @@ Link : http://blogora.herokuapp.com
 * Once can also sign-up to my newsletter regularly (mailchimp API used)
 
 **Note:** There is a lot of scope of improvement in this yet. If you have any suggestions for improvement, please create an issue or make a pull request.
+ 
+ *************************
+  *## Please share this with others & star mark this repo ⭐ if you like it!*
